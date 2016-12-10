@@ -1,0 +1,21 @@
+{
+  "name": "traveling-salesman",
+  "version": "0.0.1",
+  "description": "Traveling salesman algorithm practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Gerald Haagsma",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghaagsma/traveling-salesman.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ghaagsma/traveling-salesman/issues"
+  },
+  "homepage": "https://github.com/ghaagsma/traveling-salesman#readme"
+}
