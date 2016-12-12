@@ -1,8 +1,11 @@
 (() => {
     'use strict';
 
-    let printLine = (msg) => {
-        console.log(msg);
+    let dbg;
+
+    let debug = (msg) => {
+        if (dbg)
+            console.log(msg);
     };
 
     let getLetter = (index) => {
@@ -14,7 +17,7 @@
         for (let i = 0; i < n; ++i) {
             str += `${getLetter(i)}   `;
         }
-        printLine(str);
+        debug(str);
     };
 
     let getFormattedValue = (value) => {
@@ -28,7 +31,7 @@
     let printRow = (row, index) => {
         let formattedRow = row.map(getFormattedValue),
             str = `${getLetter(index)} ${formattedRow.join(' ')}`;
-        printLine(str);
+        writeLine(str);
     };
 
     let printModel = (model) => {
@@ -36,8 +39,32 @@
         model.map(printRow);
     };
 
+    let printQueue = (queue) => {
+        debug('Queue:');
+        queue.map((node) => {
+            debug(node.toString());
+        });
+        debug(' ');
+    };
+
+    let printResult = (result) => {
+        writeLine(`The optimal path is ${result}.`);
+    };
+
+    let setDebug = (d) => {
+        dbg = d;
+    };
+
+    let writeLine = (str) => {
+        console.log(str);
+    };
+
     module.exports = {
-        printLine: printLine,
-        printModel: printModel
+        debug: debug,
+        printModel: printModel,
+        printQueue: printQueue,
+        printResult: printResult,
+        setDebug: setDebug,
+        writeLine: writeLine
     };
 })();

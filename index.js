@@ -11,19 +11,19 @@
 
     const defaultTarget = 0;
 
-    let argument = process.argv[2],
-        target = inputParser.isInteger(argument) ?
-        parseInt(argument) : defaultTarget;
+    let target = inputParser.isInteger(process.argv[2]) ?
+        parseInt(process.argv[2]) : defaultTarget;
+
+    output.setDebug(process.argv[3]);
 
     let solve = (model) => {
-        output.printLine('Cost model:');
+        output.writeLine('Cost model:');
         output.printModel(model);
 
-        let result = core.getSolution(target);
-        output.printLine(`The answer is ${result}.`);
+        output.printResult(core.getSolution(model));
 
         let duration = (now() - startTime).toFixed(3);
-        output.printLine(`Execution time: ${duration}ms`);
+        output.writeLine(`Execution time: ${duration}ms`);
     };
 
     parser.parseFileAsync(`./input/test-${target}.txt`, solve);
