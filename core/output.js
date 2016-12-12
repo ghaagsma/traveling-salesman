@@ -52,7 +52,7 @@
     };
 
     let printResult = (result) => {
-        writeLine(`The optimal path is ${result}.`);
+        writeLine(`\nThe optimal path is ${result}.\n`);
     };
 
     let setDebug = (d) => {

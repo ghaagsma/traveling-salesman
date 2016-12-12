@@ -17,7 +17,6 @@
     output.setDebug(process.argv[3]);
 
     let solve = (model) => {
-        output.writeLine('Cost model:');
         output.printModel(model);
 
         output.printResult(core.getSolution(model));
