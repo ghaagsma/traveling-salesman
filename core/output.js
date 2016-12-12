@@ -12,6 +12,10 @@
         return String.fromCharCode('A'.charCodeAt(0) + index);
     };
 
+    let writeLine = (str) => {
+        console.log(str);
+    };
+
     let printTopRow = (n) => {
         let str = '  ';
         for (let i = 0; i < n; ++i) {
@@ -53,10 +57,6 @@
 
     let setDebug = (d) => {
         dbg = d;
-    };
-
-    let writeLine = (str) => {
-        console.log(str);
     };
 
     module.exports = {
