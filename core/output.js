@@ -17,7 +17,7 @@
         for (let i = 0; i < n; ++i) {
             str += `${getLetter(i)}   `;
         }
-        debug(str);
+        writeLine(str);
     };
 
     let getFormattedValue = (value) => {
