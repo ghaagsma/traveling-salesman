@@ -10,6 +10,7 @@
   "author": "Gerald Haagsma",
   "license": "ISC",
   "dependencies": {
+    "javascript-utilities": "../../javascript-utilities",
     "performance-now": "^0.2.0"
   },
   "devDependencies": {

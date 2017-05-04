@@ -2,7 +2,7 @@
     'use strict';
 
     let now = require('performance-now'),
-        inputParser = require('../../euler/solutions/euler-common/src/input-parser'),
+        inputParser = require('javascript-utilities/src/input-parser'),
         parser = require('./core/parser'),
         output = require('./core/output'),
         core = require('./core/core');
